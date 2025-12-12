@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "jsx": "react-jsx",
+    "baseUrl": "./src",
+    "paths": {
+      "./*": ["./*"],
+      "./pusb-about/*": ["./app/pusb/pusb-about/*"],
+      "./pusb-cnc/*": ["./app/pusb/pusb-cnc/*"],
+      "./pusb-event/*": ["./app/pusb/pusb-event/*"],
+      "./pusb-news/*": ["./app/pusb/pusb-news/*"],
+      "./pusb-sop/*": ["./app/pusb/pusb-sop/*"],
+      "./pusb-structure/*": ["./app/pusb/pusb-structure/*"],
+      "./pusb-contact/*": ["./app/pusb/pusb-contact/*"]
+    }
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}
