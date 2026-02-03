@@ -10,7 +10,7 @@ const HomeMainWorkplanSection = ({ element }) => {
           <span className="flex items-center">
             <span className="h-px flex-1 bg-white"></span>
             <span className="shrink-0 px-4 lg:px-6">
-              Sanctus Cabinet Workplans
+              Voxaris Cabinet Workplans
             </span>
             <span className="h-px flex-1 bg-white"></span>
           </span>

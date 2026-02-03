@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import SanctusLogo from "../../../../assets/sanctusLogo.png";
+import SanctusLogo from "../../../../assets/logo_voxaris.png";
 import { AiFillCaretDown } from "react-icons/ai";
 
 const HomeHeroSection = ({ handleScrollDown }) => {
@@ -17,13 +17,13 @@ const HomeHeroSection = ({ handleScrollDown }) => {
           <h1 className="text-3xl lg:text-6xl mochiy-pop-one-bold font-bold">
             President University Student Board 2025
           </h1>
-          <h1 className="text-3xl lg:text-5xl font-semibold">Sanctus Cabinet</h1>
+          <h1 className="text-3xl lg:text-5xl font-semibold">Voxaris Cabinet</h1>
         </div>
         <div className="w-1/2 flex justify-center items-center">
            <img
             className="w-80 lg:h-96 brightness-150 p-1 rounded-full border border-gray-800 shadow-lg shadow-gray-500/50"
             src={SanctusLogo}
-            alt="Sanctus Logo"
+            alt="Voxaris Logo"
           />
         </div>
       </div>

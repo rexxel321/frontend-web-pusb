@@ -38,7 +38,7 @@ const PUSBPage = () => {
         <div className="w-full font-black lg:px-0 lg:pb-0">
           <h2 className="text-3xl lg:text-4xl">Vision</h2>
           <h1 className="text-3xl lg:text-5xl">PUSB 2025</h1>
-          <h3 className="text-3xl lg:text-5xl">Sanctus Cabinet</h3>
+          <h3 className="text-3xl lg:text-5xl">Voxaris Cabinet</h3>
         </div>
         <div className="w-full bg-[#343434] p-2 lg:p-8 flex justify-center items-center rounded-lg mt-4">
           <p className="text-lg text-white font-sans font-medium">{profilePUSB.vision}</p>
@@ -50,7 +50,7 @@ const PUSBPage = () => {
         <div className="w-full text-center font-black pb-4 lg:pb-0">
           <h2 className="text-3xl lg:text-4xl">Mission</h2>
           <h1 className="text-3xl lg:text-5xl">PUSB 2025</h1>
-          <h3 className="text-3xl lg:text-5xl">Sanctus Cabinet</h3>
+          <h3 className="text-3xl lg:text-5xl">Voxaris Cabinet</h3>
         </div>
         <ContainerAccordion missions={MissionPUSB} />
       </section>

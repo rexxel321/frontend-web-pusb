@@ -1,5 +1,5 @@
 import React from "react";
-import SanctusLogo from "../assets/sanctusLogo.png";
+import SanctusLogo from "../assets/logo_voxaris.png";
 import CardLogoColor from "../../src/app/pusb/pusb-about/_components/CardLogoColor";
 import CardLogoShape from "../../src/app/pusb/pusb-about/_components/CardLogoShape";
 import { logoColor, groupedLogoShapes } from "../../src/lib/data";
@@ -18,7 +18,7 @@ const CardLogoContainer = () => {
         Our logo symbolizes the sanctuary that portrays a haven of peace,
         safety, and continuous growth in a commitment. It also reflects a
         respected, safe, and supportive environment where every member can grow
-        and make a positive contribution in our cabinet, Sanctus. The logo also
+        and make a positive contribution in our cabinet, Voxaris. The logo also
         consists of shapes and colors that represent the ministries of PUSB.
       </p>
 
@@ -43,7 +43,7 @@ const CardLogoContainer = () => {
         <div className="relative flex justify-center">
           <img
             src={SanctusLogo}
-            alt="Sanctus Cabinet Logo"
+            alt="Voxaris Cabinet Logo"
             width={200}
             height={200}
             className="h-[200px] w-[200px] rounded-3xl duration-300 hover:scale-110 hover:shadow-xl z-10"

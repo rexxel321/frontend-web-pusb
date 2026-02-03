@@ -63,9 +63,4 @@ DropdownFilter.propTypes = {
   onChange: PropTypes.func.isRequired,
 };
 
-DropdownFilter.defaultProps = {
-  sections: [],
-  selectedOptions: {},
-};
-
 export default DropdownFilter;

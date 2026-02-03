@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FiInstagram, FiTwitter, FiLinkedin } from "react-icons/fi";
-import { FaYoutube } from "react-icons/fa";
+import { FaYoutube, FaTiktok } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import { AiFillSpotify } from "react-icons/ai";
 import pusblogo from "../../assets/pusblogo2.png";
@@ -39,7 +39,7 @@ const Footer = () => {
                 President University Student Board
               </h2>
               <p className="text-sm lg:text-lg font-bold">
-                {profilePUSB?.cabinet_name ?? "Sanctus Cabinet"}
+                {profilePUSB?.cabinet_name ?? "Voxaris Cabinet"}
               </p>
             </div>
           </div>
@@ -71,7 +71,7 @@ const Footer = () => {
           {/* Find Us */}
           <div className="w-full lg:w-1/2 px-4 lg:px-8">
             <p className="font-semibold text-sm lg:text-lg">Find Us</p>
-            <div className="w-full grid grid-cols-3 lg:grid-cols-5 gap-4 mt-4 justify-center text-xs lg:text-base">
+            <div className="w-full grid grid-cols-3 lg:grid-cols-6 gap-4 mt-4 justify-center text-xs lg:text-base">
               <a
                 href={profilePUSB?.instagram ?? "https://www.instagram.com/pusbpresuniv"}
                 target="_blank"
@@ -120,6 +120,16 @@ const Footer = () => {
               >
                 <AiFillSpotify className="w-5 h-5 lg:w-6 lg:h-6" />
                 <span className="inline lg:hidden text-[10px] font-medium">Broadtalk</span>
+              </a>
+
+              <a
+                href={profilePUSB?.tiktok ?? "https://www.tiktok.com/@pusbpresuniv?_r=1&_t=ZS-93bQe0uIWRN"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2"
+              >
+                <FaTiktok className="w-5 h-5 lg:w-6 lg:h-6" />
+                <span className="inline lg:hidden text-[10px] font-medium">@pusbpresuniv</span>
               </a>
             </div>
           </div>

@@ -8,7 +8,7 @@ export default async function handler(req, res) {
     res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
     res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
     res.setHeader("Access-Control-Allow-Credentials", "true");
-    return res.status(204).end(); 
+    return res.status(204).end();
   }
 
   if (!url) {
@@ -31,12 +31,19 @@ export default async function handler(req, res) {
   try {
     console.log("Proxying request to:", url);
 
+    // Create abort controller for timeout
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 30000); // 30 second timeout
+
     const response = await fetch(url, {
       method: req.method,
       headers: forwardedHeaders,
       body: req.method !== "GET" && req.method !== "HEAD" ? JSON.stringify(req.body) : undefined,
       agent,
+      signal: controller.signal,
     });
+
+    clearTimeout(timeout);
 
     const body = await response.text();
 
@@ -55,6 +62,15 @@ export default async function handler(req, res) {
     res.status(response.status).send(body);
   } catch (error) {
     console.error("Proxy failed:", error);
+
+    // Handle timeout errors specifically
+    if (error.name === 'AbortError') {
+      return res.status(504).json({
+        error: "Gateway Timeout",
+        message: "The request to the API timed out. Please try again.",
+      });
+    }
+
     res.status(500).json({
       error: "Proxy request failed",
       message: error.message,

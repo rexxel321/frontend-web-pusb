@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Card } from "flowbite-react";
+// Path disesuaikan: naik 2 tingkat (ke folder components) lalu masuk ke animations
+import SpotlightCard from "../../animations/SpotlightCard";
 import ModalMainWorkplan from "../../../components/modal/ModalMainWorkplan";
 
 const CardWorkplan = ({ Workplan, description, index }) => {
@@ -11,26 +12,32 @@ const CardWorkplan = ({ Workplan, description, index }) => {
 
   return (
     <>
-      <Card className="relative group h-56 block shadow-sm shadow-white rounded-tl-3xl rounded-br-3xl bg-black hover:bg-white hover:bg-opacity-20">
-        <div className="relative p-2 group-hover:bg-opacity-20 group-hover:blur-sm">
-          <p className="text-sm font-medium uppercase tracking-widest text-pink-500">
+      <SpotlightCard 
+        className="relative group h-64 w-full cursor-default rounded-tl-[40px] rounded-br-[40px]"
+        spotlightColor="rgba(236, 72, 153, 0.25)" // Cahaya Pink
+      >
+        {/* Container Konten Utama */}
+        <div className="relative p-8 h-full flex flex-col justify-center transition-all duration-500 group-hover:blur-md group-hover:opacity-20">
+          <p className="text-xs font-bold uppercase tracking-[0.3em] text-pink-500 mb-3">
             Workplan # {index + 1}
           </p>
-
-          <p className="text-xl font-bold text-white sm:text-3xl">
+          <h3 className="text-2xl font-extrabold text-white sm:text-3xl leading-tight">
             {Workplan}
-          </p>
+          </h3>
         </div>
 
-        <div className="hidden absolute inset-0 group-hover:flex justify-center items-center text-white -ml-2 transition-all duration-300">
+        {/* Tombol See More (Hanya muncul saat Hover) */}
+        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
           <button
-            className="text-base border-2 border-white px-6 py-1 rounded-lg hover:bg-gray-800"
+            className="px-8 py-3 text-sm font-bold text-white border-2 border-white rounded-xl 
+                       hover:bg-white hover:text-black transition-all duration-300 active:scale-95 shadow-lg"
             onClick={handleModalDescription}
           >
             See more
           </button>
         </div>
 
+        {/* Modal Logic */}
         {openModal && (
           <ModalMainWorkplan
             openModal={openModal}
@@ -39,7 +46,7 @@ const CardWorkplan = ({ Workplan, description, index }) => {
             handleModalDescription={handleModalDescription}
           />
         )}
-      </Card>
+      </SpotlightCard>
     </>
   );
 };

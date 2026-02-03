@@ -23,22 +23,17 @@ const HomeHeroCabinetSection = () => {
             <p className="text-xl lg:text-3xl font-semibold text-white">
               <span className="flex items-center">
                 <span className="h-px flex-1 bg-white"></span>
-                <span className="shrink-0 px-4 lg:px-6">Sanctus Cabinet</span>
+                <span className="shrink-0 px-4 lg:px-6">Voxaris Cabinet</span>
                 <span className="h-px flex-1 bg-white"></span>
               </span>
             </p>
 
             <div className="mt-4 text-justify">
               <p>
-                <span className="font-bold text-lg">“Sanctus”</span> is the
-                conception of a sanctuary that portrays a haven of peace, safety,
-                and continuous growth. It reflects a commitment to creating a
-                respected, safe, and supportive environment where every member
-                can grow and make a positive contribution. It is dedicated to
-                forming a cabinet that provides a nurturing and supportive
-                environment for PresUnivers, allowing them to develop their
-                potential and enhance their academic and non-academic abilities
-                while creating a significant impact on President University.
+                <span className="font-bold text-lg">“Voxaris”</span> "Voxaris" embodies the spirit of voice, 
+                action, and strength. It portrays a commitment to listening and empowering voices to action and shared progress.
+                 The cabinet is devoted to building an active, strong, and impactful community in which it aspires to cultivate a vibrant and responsive 
+                 student body that gives active contribution to President University.
               </p>
             </div>
 

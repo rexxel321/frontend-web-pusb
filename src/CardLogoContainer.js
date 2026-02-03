@@ -18,7 +18,7 @@ const CardLogoContainer = () => {
         Our logo symbolizes the sanctuary that portrays a haven of peace,
         safety, and continuous growth in a commitment. It also reflects a
         respected, safe, and supportive environment where every member can grow
-        and make a positive contribution in our cabinet, Sanctus. The logo also
+        and make a positive contribution in our cabinet, Voxaris. The logo also
         consists of shapes and colors that represent the ministries of PUSB.
       </p>
 

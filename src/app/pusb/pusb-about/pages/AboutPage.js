@@ -4,11 +4,11 @@ import ContainerAccordion from "../_components/Accordion/ContainerAccordion";
 import CardLogoContainer from "../_components/CardLogoContainer";
 import { MissionPUSB } from "../../../../lib/data";
 import pusblogo from "../../../../assets/pusblogo2.png";
-import sanctusLogo from "../../../../assets/sanctusLogo.png";
+import sanctusLogo from "../../../../assets/logo_voxaris.png";
 
 const fallbackProfile = {
   cabinet_logo: sanctusLogo,
-  cabinet_name: "Sanctus Cabinet",
+  cabinet_name: "Voxaris Cabinet",
   vision:
     "PUSB (President University Student Board) cultivates a vibrant and inclusive student organization at President University, providing a sanctuary where every PresUnivers feels safe, respected, and empowered to thrive, grow, and make a positive impact. Through both on-campus and off-campus collaborations, we collectively aim to inspire and support PresUnivers in becoming influential leaders, dedicated to the betterment of Indonesia.",
 };

@@ -35,7 +35,7 @@ const ModalMainWorkplan = ({
       <Modal.Footer className="w-full flex justify-center h-10">
         <p className="text-sm text-white font-bold">
           <span className="font-medium">{WorkplanName}</span> @ PUSB 2025
-          Sanctus Cabinet
+          Voxaris Cabinet
         </p>
       </Modal.Footer>
     </Modal>

@@ -28,7 +28,7 @@ const Page = () => {
             President University Student Board 2025
           </h2>
           <h2 className="text-2xl lg:text-4xl font-semibold">
-            Sanctus Cabinet
+            Voxaris Cabinet
           </h2>
         </div>
       </section>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import PUSBLogo from "../../assets/pusblogo2.png";
-import SanctusLogo from "../../assets/sanctusLogo.png";
+import SanctusLogo from "../../assets/logo_voxaris.png";
 
 const Header = () => {
   const [scroll, setScroll] = useState(0);
@@ -28,10 +28,10 @@ const Header = () => {
         <div className="container mx-auto flex flex-wrap items-center justify-around">
           <a href="/" className="flex gap-2">
             <img src={PUSBLogo} width={40} height={40} alt="PUSB Logo" />
-            <img src={SanctusLogo} width={40} height={40} alt="Sanctus Logo" />
+            <img src={SanctusLogo} width={40} height={40} alt="Voxaris Logo" />
             <p className="flex flex-col md:flex-row items-center gap-2 self-center text-xl lg:text-[28px] font-black whitespace-nowrap">
               PUSB <span className="hidden md:block"> - </span>
-              <span className="text-xs md:text-sm"> Sanctus Cabinet </span>
+              <span className="text-xs md:text-sm"> Voxaris Cabinet </span>
             </p>
           </a>
           <ul className="hidden lg:flex flex-col md:flex-row md:space-x-8 mt-4 md:mt-0 md:text-sm md:font-medium px-8">
@@ -83,9 +83,9 @@ const Header = () => {
                 <div className="flex items-center justify-between mb-4">
                   <a href="/" className="flex gap-2">
                     <img src={PUSBLogo} width={40} height={40} alt="PUSB Logo" />
-                    <img src={SanctusLogo} width={40} height={40} alt="Sanctus Logo" />
+                    <img src={SanctusLogo} width={40} height={40} alt="Voxaris Logo" />
                     <p className="text-black flex flex-col md:flex-row items-center gap-1 text-xl font-black">
-                      PUSB <span className="text-sm"> Sanctus Cabinet </span>
+                      PUSB <span className="text-sm"> Voxaris Cabinet </span>
                     </p>
                   </a>
                   <button
