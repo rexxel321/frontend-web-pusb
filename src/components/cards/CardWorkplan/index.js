@@ -1,106 +1,139 @@
 import React, { useState } from "react";
 import ModalMainWorkplan from "../../../components/modal/ModalMainWorkplan";
 
-// Voxaris brand accent sets per card index
-const accentSets = [
-  {
-    gradient: "from-vox-green to-emerald-700",     // card 01 — green
-    gradientStyle: "linear-gradient(to bottom, #2B6130, #1a4d20)",
-    badgeBg: "bg-vox-green",
-    badge: "#2B6130",
-    titleHover: "group-hover:text-vox-yellow",
-    link: "text-vox-yellow",
-    glow: "hover:shadow-[0_0_28px_rgba(43,97,48,0.25)]",
-  },
-  {
-    gradient: "from-vox-red to-rose-900",          // card 02 — red
-    gradientStyle: "linear-gradient(to bottom, #8C0D0F, #5a0809)",
-    badgeBg: "bg-vox-red",
-    badge: "#8C0D0F",
-    titleHover: "group-hover:text-vox-cream",
-    link: "text-red-400",
-    glow: "hover:shadow-[0_0_28px_rgba(140,13,15,0.25)]",
-  },
-  {
-    gradient: "from-vox-yellow to-amber-500",      // card 03 — yellow
-    gradientStyle: "linear-gradient(to bottom, #FFCF0B, #d4a400)",
-    badgeBg: "bg-vox-yellow",
-    badge: "#FFCF0B",
-    titleHover: "group-hover:text-vox-yellow",
-    link: "text-yellow-400",
-    glow: "hover:shadow-[0_0_28px_rgba(255,207,11,0.2)]",
-  },
-];
-
 const CardWorkplan = ({ Workplan, description, index }) => {
   const [openModal, setOpenModal] = useState(false);
-  const acc = accentSets[index % accentSets.length];
+  const [hovered, setHovered] = useState(false);
 
   return (
     <>
-      {/* Card */}
       <div
-        className={`group relative flex flex-col gap-3 rounded-2xl p-6 cursor-pointer
-                   bg-vox-cream/5 border border-vox-cream/10
-                   hover:bg-vox-cream/10 hover:border-vox-cream/20
-                   transition-all duration-300 ease-out ${acc.glow}`}
         onClick={() => setOpenModal(true)}
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+        style={{
+          background: hovered ? "#131310" : "#0e0e0e",
+          border: `1px solid ${hovered ? "rgba(255,207,11,0.3)" : "rgba(255,255,255,0.1)"}`,
+          padding: 0,
+          minHeight: "220px",
+          display: "flex",
+          flexDirection: "column",
+          cursor: "pointer",
+          transition: "all 0.35s ease",
+          overflow: "hidden",
+        }}
       >
-        {/* Left accent stripe */}
+        {/* Gold top bar */}
         <div
-          className="absolute left-0 top-4 bottom-4 w-[3px] rounded-full"
-          style={{ background: acc.gradientStyle }}
+          style={{
+            height: "3px",
+            background: hovered
+              ? "linear-gradient(to right, #FFCF0B, #f5a623)"
+              : "linear-gradient(to right, #FFCF0B40, transparent)",
+            transition: "all 0.35s ease",
+          }}
         />
 
-        {/* Number badge + label */}
-        <div className="flex items-center gap-3 pl-3">
-          <span
-            className="flex items-center justify-center w-7 h-7 rounded-full text-white text-xs font-bold shrink-0 font-body"
-            style={{ background: acc.badge }}
+        {/* Body */}
+        <div
+          style={{
+            padding: "24px",
+            flex: 1,
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
+          {/* Index */}
+          <div
+            style={{
+              fontSize: "10px",
+              letterSpacing: "0.4em",
+              textTransform: "uppercase",
+              color: hovered ? "rgba(255,207,11,0.8)" : "rgba(255,207,11,0.45)",
+              marginBottom: "20px",
+              fontFamily: "sans-serif",
+              transition: "color 0.35s ease",
+            }}
           >
             {String(index + 1).padStart(2, "0")}
-          </span>
-          <span className="text-[10px] font-semibold uppercase tracking-[0.25em] text-vox-cream/50 font-body">
-            Workplan
-          </span>
-        </div>
+          </div>
 
-        {/* Title */}
-        <h3 className={`pl-3 text-lg font-display tracking-wide text-vox-cream leading-snug ${acc.titleHover} transition-colors duration-300`}>
-          {Workplan}
-        </h3>
-
-        {/* Description preview */}
-        <p className="pl-3 text-sm text-vox-cream/50 leading-relaxed line-clamp-2 font-body">
-          {description}
-        </p>
-
-        {/* View Details link */}
-        <div className="pl-3 mt-1 flex items-center gap-1.5">
-          <span className={`text-xs font-semibold ${acc.link} font-body`}>
-            View Details
-          </span>
-          <svg
-            className={`w-3 h-3 ${acc.link} group-hover:translate-x-1 transition-transform duration-300`}
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={2.5}
+          {/* Title */}
+          <h3
+            style={{
+              fontSize: "16px",
+              fontWeight: 400,
+              color: hovered ? "#ffffff" : "rgba(255,255,255,0.8)",
+              lineHeight: "1.55",
+              flex: 1,
+              margin: 0,
+              fontFamily: "Georgia, serif",
+              transition: "color 0.35s ease",
+            }}
           >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-          </svg>
+            {Workplan}
+          </h3>
+
+          {/* Description slide in */}
+          <p
+            style={{
+              fontSize: "12px",
+              color: "rgba(255,255,255,0.38)",
+              lineHeight: "1.75",
+              fontFamily: "sans-serif",
+              maxHeight: hovered ? "80px" : "0px",
+              opacity: hovered ? 1 : 0,
+              overflow: "hidden",
+              marginTop: hovered ? "14px" : "0px",
+              transition: "max-height 0.4s ease, opacity 0.3s ease, margin 0.3s ease",
+            }}
+          >
+            {description}
+          </p>
+
+          {/* Footer */}
+          <div
+            style={{
+              marginTop: "20px",
+              display: "flex",
+              alignItems: "center",
+              gap: "8px",
+            }}
+          >
+            <div
+              style={{
+                width: "4px",
+                height: "4px",
+                borderRadius: "50%",
+                background: "#FFCF0B",
+                opacity: hovered ? 0.9 : 0.4,
+                transition: "opacity 0.35s ease",
+              }}
+            />
+            <span
+              style={{
+                fontSize: "10px",
+                letterSpacing: "0.25em",
+                textTransform: "uppercase",
+                color: hovered ? "rgba(255,255,255,0.4)" : "rgba(255,255,255,0.2)",
+                fontFamily: "sans-serif",
+                transition: "color 0.35s ease",
+              }}
+            >
+              Read More
+            </span>
+          </div>
         </div>
       </div>
 
-      {/* Modal */}
       {openModal && (
         <ModalMainWorkplan
           openModal={openModal}
           WorkplanName={Workplan}
           WorkplanDescription={description}
           handleModalDescription={() => setOpenModal(false)}
-          accentStyle={acc.gradientStyle}
-          accentColor={acc.badge}
+          accentStyle="linear-gradient(to right, #FFCF0B, #f5a623)"
+          accentColor="#FFCF0B"
           index={index}
         />
       )}

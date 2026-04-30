@@ -7,20 +7,21 @@ import { AiFillCaretDown } from "react-icons/ai";
 const HomeHeroSection = ({ handleScrollDown }) => {
   return (
     <section className="relative mx-auto lg:min-h-[85vh] min-h-screen max-w-screen-xl px-4 lg:px-20 flex flex-col justify-center items-center">
-      {/* Big background watermark */}
-      <div className="absolute w-full -z-20 text-center select-none pointer-events-none">
-        <p className="text-8xl lg:text-[350px] font-display font-black opacity-5 -mt-12 text-vox-cream tracking-widest">
+
+      {/* Centered PUSB text overlay */}
+      <div className="absolute inset-0 flex justify-center items-center z-0 select-none pointer-events-none">
+        <p className="w-full text-center text-[100px] lg:text-[320px] font-display font-black text-gray-400/20 tracking-[0.05em] leading-none">
           PUSB
         </p>
       </div>
 
       {/* Main content row */}
-      <div className="w-full h-full flex flex-col lg:flex-row justify-center lg:justify-between items-center gap-4 -mt-16">
+      <div className="w-full h-full flex flex-col lg:flex-row justify-center lg:justify-between items-center gap-4 -mt-16 z-10 relative">
         {/* Text side */}
         <div className="w-full text-center lg:text-left space-y-3">
           {/* Eyebrow badge */}
           <span className="inline-block px-3 py-1 text-[11px] font-semibold tracking-[0.2em] uppercase rounded-full bg-vox-yellow text-vox-black font-body">
-            Voxaris Cabinet 2025
+            Voxaris Cabinet 2026
           </span>
 
           <h1 className="text-4xl lg:text-7xl font-display tracking-wider text-vox-cream leading-none">
@@ -46,7 +47,7 @@ const HomeHeroSection = ({ handleScrollDown }) => {
       </div>
 
       {/* Scroll CTA */}
-      <div className="w-full flex justify-center lg:justify-start items-center mt-8">
+      <div className="w-full flex justify-center lg:justify-start items-center mt-8 z-10 relative">
         <button
           className="px-8 lg:px-12 h-11 rounded-full border border-vox-green/60
                      text-sm font-medium text-vox-cream font-body
