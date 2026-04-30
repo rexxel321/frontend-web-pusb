@@ -1,29 +1,44 @@
 import React from "react";
-import CardWorkplan from "../../../cards/CardWorkplan/index"; 
+import CardWorkplan from "../../../cards/CardWorkplan/index";
 import { mainWorkplanPUSB } from "../../../../lib/data";
 
 const HomeMainWorkplanSection = ({ element }) => {
   return (
-    <section className="w-full min-h-[90vh] px-8 lg:px-16 py-8" ref={element}>
-      <div className="w-full mx-auto">
-        <h1 className="text-xl lg:text-3xl font-bold leading">
-          <span className="flex items-center">
-            <span className="h-px flex-1 bg-white"></span>
-            <span className="shrink-0 px-4 lg:px-6">
-              Voxaris Cabinet Workplans
-            </span>
-            <span className="h-px flex-1 bg-white"></span>
-          </span>
-        </h1>
+    <section
+      className="w-full min-h-[60vh] px-8 lg:px-16 py-16"
+      ref={element}
+    >
+      {/* Section header */}
+      <div className="mb-10 flex flex-col items-center text-center gap-3">
+        {/* Badge */}
+        <span
+          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full
+                     bg-vox-green/15 border border-vox-green/30
+                     text-vox-yellow text-[11px] font-semibold tracking-[0.2em] uppercase font-body"
+        >
+          <span className="w-1.5 h-1.5 rounded-full bg-vox-yellow animate-pulse" />
+          Our Programs
+        </span>
+
+        {/* Title */}
+        <h2 className="text-4xl lg:text-5xl font-display tracking-wider text-vox-cream">
+          Voxaris Cabinet{" "}
+          <span className="text-vox-yellow">Workplans</span>
+        </h2>
+
+        {/* Subtitle */}
+        <p className="max-w-md text-sm text-vox-cream/40 leading-relaxed font-body">
+          Programs designed to inform, engage, and inspire the President
+          University community throughout the academic year.
+        </p>
       </div>
-      <div
-        className="w-full grid grid-cols-1 lg:grid-cols-3 gap-8 py-8"
-        style={{ gridTemplateColumns: `repeat(${mainWorkplanPUSB.length}, 1fr)` }} 
-      >
+
+      {/* Cards */}
+      <div className="w-full max-w-2xl mx-auto flex flex-col gap-4">
         {mainWorkplanPUSB.map((workplan, index) => (
           <CardWorkplan key={index} index={index} {...workplan} />
         ))}
-      </div> 
+      </div>
     </section>
   );
 };

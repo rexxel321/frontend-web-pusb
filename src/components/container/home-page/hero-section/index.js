@@ -7,35 +7,57 @@ import { AiFillCaretDown } from "react-icons/ai";
 const HomeHeroSection = ({ handleScrollDown }) => {
   return (
     <section className="relative mx-auto lg:min-h-[85vh] min-h-screen max-w-screen-xl px-4 lg:px-20 flex flex-col justify-center items-center">
-      <div className="absolute w-full -z-20 text-center">
-        <p className="text-8xl lg:text-[350px] font-black opacity-40 lg:opacity-10 -mt-12">
+      {/* Big background watermark */}
+      <div className="absolute w-full -z-20 text-center select-none pointer-events-none">
+        <p className="text-8xl lg:text-[350px] font-display font-black opacity-5 -mt-12 text-vox-cream tracking-widest">
           PUSB
         </p>
       </div>
+
+      {/* Main content row */}
       <div className="w-full h-full flex flex-col lg:flex-row justify-center lg:justify-between items-center gap-4 -mt-16">
-        <div className="w-full text-center lg:text-left">
-          <h1 className="text-3xl lg:text-6xl mochiy-pop-one-bold font-bold">
-            President University Student Board 2025
+        {/* Text side */}
+        <div className="w-full text-center lg:text-left space-y-3">
+          {/* Eyebrow badge */}
+          <span className="inline-block px-3 py-1 text-[11px] font-semibold tracking-[0.2em] uppercase rounded-full bg-vox-yellow text-vox-black font-body">
+            Voxaris Cabinet 2025
+          </span>
+
+          <h1 className="text-4xl lg:text-7xl font-display tracking-wider text-vox-cream leading-none">
+            President University
+            <br />
+            <span className="text-vox-yellow">Student Board</span>
           </h1>
-          <h1 className="text-3xl lg:text-5xl font-semibold">Voxaris Cabinet</h1>
+
+          <p className="text-base text-vox-cream/60 font-body max-w-md font-light">
+            Voice · Action · Strength — building an active, strong, and impactful
+            student community at President University.
+          </p>
         </div>
+
+        {/* Logo side */}
         <div className="w-1/2 flex justify-center items-center">
-           <img
-            className="w-80 lg:h-96 brightness-150 p-1 rounded-full border border-gray-800 shadow-lg shadow-gray-500/50"
+          <img
+            className="w-72 lg:w-80 lg:h-80 object-contain"
             src={SanctusLogo}
             alt="Voxaris Logo"
           />
         </div>
       </div>
-      <div className="w-full flex justify-center lg:justify-start items-center">
+
+      {/* Scroll CTA */}
+      <div className="w-full flex justify-center lg:justify-start items-center mt-8">
         <button
-          className="px-8 lg:px-12 h-12 mt-12 lg:-mt-16 rounded-full border border-gray-600 text-sm font-medium text-white hover:bg-gray-600 focus:outline-none focus:ring active:bg-gray-500 sm:w-auto flex flex-row-reverse justify-center items-center gap-2 mochiy-pop-one-regular"
+          className="px-8 lg:px-12 h-11 rounded-full border border-vox-green/60
+                     text-sm font-medium text-vox-cream font-body
+                     hover:bg-vox-green hover:border-vox-green hover:text-vox-cream
+                     focus:outline-none active:scale-95
+                     flex flex-row-reverse justify-center items-center gap-2
+                     transition-all duration-300"
           onClick={handleScrollDown}
         >
-          <div>
-            <AiFillCaretDown />
-          </div>
-          <p>Workplan</p>
+          <AiFillCaretDown />
+          <span>Workplans</span>
         </button>
       </div>
     </section>

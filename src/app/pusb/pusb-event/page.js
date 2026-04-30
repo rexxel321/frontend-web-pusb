@@ -1,27 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import CardHighlightContainer from "./_components/CardHighlightContainer";
-import ContainerCardEvents from "./_components/ContainerCardEvents";
-import { GetPUSBEvent } from "../../../pages/api/pusb-events"; 
+import CardHighlightContainer2026 from "./_components/CardHighlightContainer2026";
+import CardHighlightContainer2024 from "./_components/CardHighlightContainer2024";
 
 const Page = () => {
-  const [pusbEvents, setPusbEvents] = useState([]);
-  const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchEvents = async () => {
-      try {
-        const events = await GetPUSBEvent(); 
-        setPusbEvents(events);
-      } catch (err) {
-        setError(`Failed to load events. ${err.message}`);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchEvents();
-  }, []);
 
   return (
     <main className="w-full min-h-screen px-8 lg:px-16">
@@ -37,7 +19,23 @@ const Page = () => {
         </h3>
       </section>
 
-      {/* Highlights Section */}
+      {/* 2026 Highlights Section */}
+      <section className="w-full min-h-[60vh] lg:flex lg:flex-col justify-center items-center gap-8 py-8">
+        <div className="w-full">
+          <h2 className="text-4xl font-bold lg:text-5xl mb-4 lg:mb-0">
+            <span className="italic">2026</span> EVENTS 
+          </h2>
+        </div>
+        <div className="w-full">
+          <div className="keen-slider">
+            <div id="keen-slider-2026" className="keen-slider">
+              <CardHighlightContainer2026 />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 2025 Highlights Section */}
       <section className="w-full min-h-[60vh] lg:flex lg:flex-col justify-center items-center gap-8 py-8">
         <div className="w-full">
           <h2 className="text-4xl font-bold lg:text-5xl mb-4 lg:mb-0">
@@ -53,21 +51,21 @@ const Page = () => {
         </div>
       </section>
 
-      {/* Previous Events Section */}
-     <section className="w-full">
-      <h2 className="text-2xl font-bold lg:text-3xl">
-        <span className="italic">2024</span> EVENTS
-      </h2>
-
-      <ContainerCardEvents
-        pusbEvents={pusbEvents?.filter(
-          (event) => event.name?.toUpperCase().trim() !== "COMING SOON"
-        )}
-        error={error}
-        loading={loading}
-        isLatest={true}
-      />
-    </section>
+      {/* 2024 Highlights Section */}
+      <section className="w-full min-h-[60vh] lg:flex lg:flex-col justify-center items-center gap-8 py-8">
+        <div className="w-full">
+          <h2 className="text-4xl font-bold lg:text-5xl mb-4 lg:mb-0">
+            <span className="italic">2024</span> EVENTS 
+          </h2>
+        </div>
+        <div className="w-full">
+          <div className="keen-slider">
+            <div id="keen-slider-2024" className="keen-slider">
+              <CardHighlightContainer2024 />
+            </div>
+          </div>
+        </div>
+      </section>
 
 
       {/* See All Events Link */}

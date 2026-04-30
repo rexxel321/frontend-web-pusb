@@ -4,10 +4,10 @@ import { Modal } from "flowbite-react";
 const ModalActivity = ({ openModal, handleModalDescription, WorkplanCNC }) => {
   return (
     <Modal dismissible show={openModal} onClose={handleModalDescription}>
-      <Modal.Header>{WorkplanCNC.title}</Modal.Header>
+      <Modal.Header className="[&>h3]:w-full [&>h3]:text-center">{WorkplanCNC.title}</Modal.Header>
       <Modal.Body>
         <div className="h-[75vh] overflow-y-auto w-full space-y-6 text-black bg-white px-4 lg:px-8 py-4">
-          <p className="text-base leading-relaxed text-gray-500">
+          <p className="text-base leading-relaxed text-gray-700 whitespace-pre-wrap">
             {WorkplanCNC.description}
           </p>
         </div>

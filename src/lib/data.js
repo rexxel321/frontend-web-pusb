@@ -9,6 +9,12 @@ import PYLCimage from "../assets/pylc2024.jpg";
 import PUVVimage from "../assets/puvv2024.jpg";
 import Interactimage from "../assets/interact2024.jpg";
 import Comforimage from "../assets/comfor2025.jpg"
+import Comfor2026image from "../assets/communication forum1(1).jpeg"
+import BCA2026image from "../assets/bca1.JPG"
+import GOH2024image from "../assets/goh2024.jpg"
+import MRMS2024image from "../assets/mrms2024.jpg"
+import BCA2024image from "../assets/bca2024.jpg"
+import Culfest2024image from "../assets/culfest2024.jpg"
 import MOCSimage from "../assets/mocs.png";
 import MOFimage from "../assets/mof.png";
 import MOSDimage from "../assets/mosd.png";
@@ -96,13 +102,112 @@ export const MissionPUSB = [
   },
 ];
 
+export const eventsHighlight2026PUSB = [
+  {
+    eventImage: Comfor2026image,
+    eventName: "Communication Forum I 2026",
+    eventDesc: `Greetings, Presunivers!
+
+President University, Cikarang — On February 28th, 2026, PUSB successfully organized the Communication Forum I 2026. The event was led by Andini Nurfitriani together with the committee, carrying the theme: “Align to Thrive.”
+
+This event is dedicated for all Clubs and Communities (CnC) under PUSB to present their work plans and relearn their roles and responsibilities for the upcoming period.
+
+Swipe through the slides to learn more about Communication Forum I 2026.
+
+–Communication Forum I 2026–
+“Aligned in Vision, Stronger in Action!”
+
+Warm regards,
+PUSB 2026 x Voxaris Cabinet`,
+    eventTimeline: "Completed",
+    eventPresents: null,
+    isPresent: true,
+    ministry: "MOC",
+  },
+  {
+    eventImage: BCA2026image,
+    eventName: "Board of Clubs and Communities Avowal 2026",
+    eventDesc: `Great day, Presunivers!
+
+President University, Cikarang — On January 25th and 26th, 2026, PUSB successfully launched its first event of the term, the Board of Clubs and Communities Avowal 2026. It was led by Mega Maria Wilda Welan and her dedicated team, with the event theme: “Exquisite Conclave.”
+
+This event served as a space for all Clubs and Communities (CnC) under the PUSB to deepen their understanding of administration and financial management, while strengthening the bonds between every CnC for the upcoming period.
+
+
+Swipe through the slides to see the informations regarding the Board of Clubs and Communities Avowal 2026.
+
+–Board of Clubs and Communities Avowal 2026–
+“Where excellence convenes, leadership emerges!”
+
+Warm Regards,
+PUSB 2026 x Voxaris Cabinet`,
+    eventTimeline: "Completed",
+    eventPresents: null,
+    isPresent: true,
+    ministry: "MOSA",
+  },
+];
+
+export const eventsHighlight2024PUSB = [
+  {
+    eventImage: MRMS2024image,
+    eventName: "Mr & Ms President University",
+    eventDesc:
+      "Mr. and Ms. President University is an event that celebrates the talents, confidence, and individuality of students at President University. This competition is not just about looks; it's a chance for participants to show their skills, creativity, and personality. Participants will take on challenges like public speaking, creative performances, and showcasing their confidence.",
+    eventTimeline: "Completed",
+    eventPresents: null,
+    isPresent: false,
+    ministry: "MOSA",
+  },
+  {
+    eventImage: GOH2024image,
+    eventName: "Grant of Hopes",
+    eventDesc:
+      "Grant of Hopes is a social event that aims to raise funds and donations for children and people in need. The event will collect money and goods through sponsorships, donations, and fundraising activities to make a positive impact on the community. The event includes social activities such as visiting foundations or orphanages to engage in meaningful interactions and support those in need.",
+    eventTimeline: "Completed",
+    eventPresents: null,
+    isPresent: false,
+    ministry: "MOSA",
+  },
+  {
+    eventImage: BCA2024image,
+    eventName: "BCA",
+    eventDesc:
+      "Board of Clubs and Communities Avowal is an essential platform for introducing PUSB's event to all CnC, providing them with insightful material. There will be two main sessions, namely a sharing session and a bonding session. The sharing session provides useful materials to improve organizational skills, especially in proposal writing and financial management.",
+    eventTimeline: "Completed",
+    eventPresents: null,
+    isPresent: false,
+    ministry: "MOSA",
+  },
+  {
+    eventImage: PUVVimage,
+    eventName: "PUVV",
+    eventDesc:
+      "President University Vocal Victory is an annual singing competition organized by the President University Student Board (PUSB) to highlight the diverse musical talents of President University students. This event serves as a platform for students to express their passion for music and vocal arts, fostering creativity and healthy competition.",
+    eventTimeline: "Completed",
+    eventPresents: null,
+    isPresent: false,
+    ministry: "MOSA",
+  },
+  {
+    eventImage: Culfest2024image,
+    eventName: "Cultural Festival",
+    eventDesc:
+      "Cultural Festival is an annual event celebrating the rich cultural diversity of President University students. The festival features performances, exhibitions, and activities showcasing various cultures from across Indonesia and around the world, fostering unity and cultural appreciation among all Presunivers.",
+    eventTimeline: "Completed",
+    eventPresents: null,
+    isPresent: false,
+    ministry: "MOSA",
+  },
+];
+
 export const eventsHighlightPUSB = [
   {
     eventImage: MRMSimage,
     eventName: "Mr & Ms President University",
     eventDesc:
       "Mr. and Ms. President University is an event that celebrates the talents, confidence, and individuality of students at President University. This competition is not just about looks; it’s a chance for participants to show their skills, creativity, and personality. Participants will take on challenges like public speaking, creative performances, and showcasing their confidence. The event looks for qualities like leadership, intelligence, and charm, representing the values of the university.",
-    eventTimeline: "Present",
+    eventTimeline: "Completed",
     eventPresents: "Finals",
     isPresent: true,
     ministry: "MOSA",
@@ -132,7 +237,7 @@ export const eventsHighlightPUSB = [
     eventName: "PUVV",
     eventDesc:
       "President University Vocal Victory (PUVV) is an annual singing competition organized by the President University Student Board (PUSB) to highlight the diverse musical talents of President University students. This event serves as a platform for students to express their passion for music and vocal arts, fostering creativity, building a spirit of healthy competition, and providing opportunities for aspiring singers to shine. The competition spans approximately three months and features multiple stages, including several phases until Grand Final Night",
-    eventTimeline: "Soon",
+    eventTimeline: "Completed",
     eventPresents: null,
     isPresent: false,
     ministry: "MOSA",
@@ -142,7 +247,7 @@ export const eventsHighlightPUSB = [
     eventName: "Company Visit",
     eventDesc:
       "Company Visit will involve a series of activities, including presentations from the company team on their bureaucratic structure and business operations, Q&A sessions, office tours, and networking sessions, and panel discussions with company employees. The event is designed to provide a comprehensive understanding of how career planning supports company operations and policy implementation",
-    eventTimeline: "Soon",
+    eventTimeline: "Completed",
     eventPresents: null,
     isPresent: false,
     ministry: "MOSA",
@@ -152,7 +257,7 @@ export const eventsHighlightPUSB = [
     eventName: "PUST",
     eventDesc:
       "President University Sport Tournament (PUST) is an internal sports tournament at President University. This event was made to be a place that enhances sportsmanship and solidarity among all Pressunivers. In this event, all Presunivers are invited to participate in this sports competition students can compete for not only with fellow students, but also lecturers, staff, and regular night students. The event also encourages the participation of both foreign students and lecturers to reduce the gap between nations and create a friendly environment for all. we will announce the winners of competition in Final night",
-    eventTimeline: "Soon",
+    eventTimeline: "Completed",
     eventPresents: null,
     isPresent: false,
     ministry: "MOSA",
@@ -162,7 +267,7 @@ export const eventsHighlightPUSB = [
     eventName: "PYLC",
     eventDesc:
       "President University Youth Leadership Camp (PYLC) is an annual event organized by the President University Student Board to prepare young leaders for future challenges. The camp offers a combination of theory-based learning and practical activities focused on developing emotional intelligence in participants' leadership styles through interactive workshops, in-depth group discussions, outbound and team-building games, self-reflection and togetherness activities.",
-    eventTimeline: "Soon",
+    eventTimeline: "Completed",
     eventPresents: null,
     isPresent: false,
     ministry: "MOSD",
@@ -172,7 +277,7 @@ export const eventsHighlightPUSB = [
     eventName: "INTERACT",
     eventDesc:
       "Interactive Communication Training (INTERACT) is an event designed to improve public speaking skills and teach participants how to communicate effectively with people of different ages. The program focuses on delivering clear messages, avoiding misunderstandings, and adapting to different types of age. Participants will also join a Forum Group Discussion (FGD) to share ideas and exchange perspectives, enhancing their communication abilities for both personal and professional situations.",
-    eventTimeline: "Soon",
+    eventTimeline: "Completed",
     eventPresents: null,
     isPresent: false,
     ministry: "MOSD",

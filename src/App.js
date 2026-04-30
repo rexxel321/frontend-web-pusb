@@ -7,6 +7,7 @@ import './index.css';
 
 const AboutUs = React.lazy(() => import("./app/pusb/pusb-about/pages/AboutPage"));
 const Structure = React.lazy(() => import("./app/pusb/pusb-structure/page"));
+const StructureVoxaris = React.lazy(() => import("./app/pusb/pusb-structure-voxaris/page"));
 const Events = React.lazy(() => import("./app/pusb/pusb-event/page"));
 const AllEvents = React.lazy(() => import("./app/pusb/pusb-event/all/page"));
 const EventDetailPage =  React.lazy(() => import("./app/pusb/pusb-event/[id]/page"));
@@ -29,6 +30,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="pusb/pusb-about" element={<AboutUs />} />
           <Route path="pusb/pusb-structure" element={<Structure />} />
+          <Route path="pusb/pusb-structure-voxaris" element={<StructureVoxaris />} />
           <Route path="pusb/pusb-event" element={<Events />} />
           <Route path="/pusb-event/all" element={<AllEvents />} />
           <Route path="/pusb-event/:id" element={<EventDetailPage />} /> 

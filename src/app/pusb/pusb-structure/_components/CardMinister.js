@@ -2,17 +2,18 @@ import React from "react";
 import people from "../../../../assets/s.png";
 import { FiInstagram, FiLinkedin } from "react-icons/fi";
 
-const CardMinister = ({ name, position, image, socialLinks = {} }) => {
+const CardMinister = ({ name, position, image, socialLinks = {}, size = "md", imageClass = "" }) => {
+  const heightClass = size === "xl" ? "h-[30rem]" : size === "lg" ? "h-96" : "h-64";
   return (
     <div className="w-full flex justify-center items-center">
-      <div className="relative w-80 h-64">
+      <div className={`relative w-80 ${heightClass}`}>
         <div className="overflow-hidden transition duration-300 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
           <img
             src={image || people}
             alt={name}
             width={300}
             height={200}
-            className="object-contain w-full h-64 rounded-lg"
+            className={`object-contain w-full ${heightClass} rounded-lg ${imageClass}`}
           />
 
           <div className="absolute inset-0 flex flex-col justify-center items-center px-5 py-4 text-center transition-opacity duration-300 bg-black bg-opacity-75 opacity-0 hover:opacity-100">

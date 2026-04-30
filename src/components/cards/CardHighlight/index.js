@@ -50,13 +50,12 @@ const CardHighlight = ({
           {/* Event Status */}
           <p className="text-sm font-bold text-gray-800">
             <span
-              className={`px-3 py-2 rounded-lg text-white ${
-                eventTimeline === "Present"
+              className={`px-3 py-2 rounded-lg text-white ${eventTimeline === "Present"
                   ? "bg-yellow-500"
                   : eventTimeline === "Completed"
-                  ? "bg-green-500"
-                  : "bg-red-700"
-              }`}
+                    ? "bg-green-500"
+                    : "bg-red-700"
+                }`}
             >
               {eventTimeline}
             </span>
@@ -73,11 +72,11 @@ const CardHighlight = ({
           openModal={openModal}
           handleModalDescription={() => setOpenModal(false)}
           WorkplanCNC={{
-            id: "some-id",
-            cnc_id: "some-cnc-id",
-            duration: "some-duration",
-            date_parse: "some-date",
-            status: "some-status",
+            id: "",
+            cnc_id: ministry,
+            duration: eventTimeline,
+            date_parse: "",
+            status: "",
             title: eventName,
             description: eventDesc,
           }}

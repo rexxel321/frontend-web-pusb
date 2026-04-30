@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import CardTabEvents from "../_components/CardTabEvents";
-import { GetPUSBEvent } from "../../../../pages/api/pusb-events";
+import { GetPUSBEvent } from "../../../../pages/api/pusb-events"; 
 import Pagination from "../../../../components/shared/Pagination";
 import Sceleton from "../../../../components/shared/Sceleton";
 import DropdownFilter from "../../../../components/shared/DropdownFilter";
@@ -23,7 +23,7 @@ const Page = () => {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const events = await GetPUSBEvent();
+        const events = await GetPUSBEvent(); 
         setPusbEvents(events);
       } catch (err) {
         setError(`Failed to load events. ${err.message}`);
@@ -46,7 +46,7 @@ const Page = () => {
     },
     {
       title: "Period",
-      options: ["Daily", "Monthly", "Annually"],
+      options: ["Daily", "Monthly", "Annually"], 
     },
   ];
 
@@ -107,13 +107,16 @@ const Page = () => {
       <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-8 py-4">
         {loading
           ? Array.from({ length: eventsPerPage }).map((_, index) => (
-            <Sceleton key={index} />
-          ))
+              <Sceleton key={index} />
+            ))
           : currentEvents.map((event) => (
-            <div key={event.id}>
-              <CardTabEvents pusbEvent={event} />
-            </div>
-          ))}
+              <div key={event.id}>
+                <CardTabEvents pusbEvent={event} />
+              </div>
+            ))}
+
+
+            
       </div>
 
       {/* Pagination */}
@@ -126,22 +129,11 @@ const Page = () => {
       )}
 
       {/* Error Handling */}
-      {error && (
-        <div className="w-full bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mt-4" role="alert">
-          <strong className="font-bold">Error: </strong>
-          <span className="block sm:inline">{error}</span>
-          <p className="text-sm mt-2">Please refresh the page or try again later.</p>
-        </div>
-      )}
-
-      {/* No Events */}
-      {!loading && !error && filteredEvents.length === 0 && (
-        <div className="w-full text-center py-8 text-gray-500">
-          No events found matching your filters.
-        </div>
-      )}
+      {error && <div className="text-red-500 mt-4">{error}</div>}
     </main>
   );
 };
 
 export default Page;
+
+

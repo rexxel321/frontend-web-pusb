@@ -2,116 +2,85 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ── Voxaris Cabinet Brand Fonts ─────────────────────────────── */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700;800&family=Arimo:wght@400;500;700&display=swap");
+
+/* ── CSS Variables ────────────────────────────────────────────── */
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --vox-green:  #2B6130;
+  --vox-red:    #8C0D0F;
+  --vox-cream:  #F6E5CA;
+  --vox-yellow: #FFCF0B;
+  --vox-black:  #000001;
+  --vox-white:  #FFFFFF;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
+/* ── Global Base ──────────────────────────────────────────────── */
+html,
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: var(--vox-black) !important;
+  background: var(--vox-black) !important;
+  color: var(--vox-cream);
+  font-family: "Barlow", sans-serif;
 }
 
+/* ── Utilities ────────────────────────────────────────────────── */
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+  .text-balance { text-wrap: balance; }
+  .font-display { font-family: "Bebas Neue", sans-serif; }
+  .font-body    { font-family: "Barlow", sans-serif; }
+  .font-footer  { font-family: "Arimo", sans-serif; }
 }
 
-/* styles.css or a similar global stylesheet */
-
-/* Define base styles for smaller screens */
+/* ── Logo Layout Helpers ──────────────────────────────────────── */
 .card-logo-shape,
 .card-logo-color {
   position: absolute;
 }
 
-/* Media queries for larger screens */
 @media (min-width: 1024px) {
-  .card-logo-shape-left-64 {
-    left: 64px;
-  }
-  .card-logo-shape-left-144 {
-    left: 144px;
-  }
-  .card-logo-shape-left-192 {
-    left: 192px;
-  }
-
-  .card-logo-color-right--64 {
-    right: -64px;
-  }
-  .card-logo-color-right-0 {
-    right: 0;
-  }
-  .card-logo-color-right-44 {
-    right: 44px;
-  }
+  .card-logo-shape-left-64  { left: 64px; }
+  .card-logo-shape-left-144 { left: 144px; }
+  .card-logo-shape-left-192 { left: 192px; }
+  .card-logo-color-right--64 { right: -64px; }
+  .card-logo-color-right-0   { right: 0; }
+  .card-logo-color-right-44  { right: 44px; }
 }
 
-/* Customize the scrollbar */
+/* ── Scrollbar ────────────────────────────────────────────────── */
 ::-webkit-scrollbar {
   width: 5px;
   height: 10px;
   border-radius: 12px;
 }
-
-/* Track */
 ::-webkit-scrollbar-track {
-  background: white;
-  margin-left: 1rem;
+  background: #0a0a0a;
 }
-
-/* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #b4b7c4;
+  background: #2B6130;
   border-radius: 12px;
 }
-
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #292f3b;
+  background: #8C0D0F;
 }
 
 .scrollbar-timeline {
   overflow-y: hidden;
   overflow-x: auto;
 }
-
-/* Custom scrollbar styles for scrollbar-timeline */
 .scrollbar-timeline::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
-
-/* Scrollbar Track */
 .scrollbar-timeline::-webkit-scrollbar-track {
-  background: #f0f0f0;
+  background: rgba(246,229,202,0.05);
   border-radius: 12px;
   margin: 4px;
 }
-
-/* Scrollbar Thumb */
 .scrollbar-timeline::-webkit-scrollbar-thumb {
-  background-color: #b4b7c4;
+  background-color: #2B6130;
   border-radius: 12px;
 }
-
-/* Thumb on Hover */
 .scrollbar-timeline::-webkit-scrollbar-thumb:hover {
-  background-color: #292f3b;
+  background-color: #FFCF0B;
 }
