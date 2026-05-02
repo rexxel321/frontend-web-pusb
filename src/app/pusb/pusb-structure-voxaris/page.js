@@ -48,6 +48,11 @@ import azzikraImg from "../../../assets/Muhammad Azzikra.png";
 import gloryImg from "../../../assets/Glory Kristy Widjojo.png";
 import wahyuImg from "../../../assets/Wahyu Hidayat Saputra.png";
 import salwaImg from "../../../assets/salwa ade aprilia dai.png";
+import feliImg from "../../../assets/feli-removebg-preview.png";
+import revaImg from "../../../assets/reva-removebg-preview.png";
+import rendiImg from "../../../assets/Muhamad_Rendi_Raditya_Pribadie-removebg-preview.png";
+import suciImg from "../../../assets/Suci_Khadijah_Siregar-removebg-preview.png";
+import nabillaImg from "../../../assets/nabilla-removebg-preview.png";
 
 const ministeriesData = [
   { id: "exec", title: "President & Vice President", ministers: [
@@ -91,8 +96,8 @@ const ministeriesData = [
       { name: "Rasmadhani Idadi", position: "Society", image: rasmadhaniImg, socialLinks: { instagram: "https://www.instagram.com/arrsmdhni", linkedin: "https://www.linkedin.com/in/rasmadhani-idadi-8a0101381/" } },
       { name: "Mega Maria Wilda Welan", position: "Sport", image: megaImg, socialLinks: { instagram: "https://www.instagram.com/_______mega", linkedin: "https://www.linkedin.com/in/mega-welan-27aa25380/" } },
       { name: "Muhamad Fa'Levi Armendo Tanjung", position: "Sport", image: faleviImg, socialLinks: { instagram: "https://www.instagram.com/falevi_arm", linkedin: "https://www.linkedin.com/in/m-fa-levi-armendo-tanjung-3b5a79264/" } },
-      { name: "Muhamad Rendi Raditya Pribadie", position: "Regular Night", image: null, socialLinks: { instagram: "https://www.instagram.com/muhamadrendi_20", linkedin: "https://www.linkedin.com/in/muhamad-rendi-b35866380/" } },
-      { name: "Suci Khadijah Siregar", position: "Regular Night", image: null, socialLinks: { instagram: "https://www.instagram.com/sucikhadijaah", linkedin: "https://www.linkedin.com/in/suci-khadijah-siregar-98a885327" } },
+      { name: "Muhamad Rendi Raditya Pribadie", position: "Regular Night", image: rendiImg, socialLinks: { instagram: "https://www.instagram.com/muhamadrendi_20", linkedin: "https://www.linkedin.com/in/muhamad-rendi-b35866380/" } },
+      { name: "Suci Khadijah Siregar", position: "Regular Night", image: suciImg, socialLinks: { instagram: "https://www.instagram.com/sucikhadijaah", linkedin: "https://www.linkedin.com/in/suci-khadijah-siregar-98a885327" } },
     ]
   },
   { id: "mosd", title: "MOSD",
@@ -106,7 +111,6 @@ const ministeriesData = [
       { name: "Muhammad Azzikra", position: "Research & Development", image: azzikraImg, socialLinks: { instagram: "https://www.instagram.com/mhmdzikk", linkedin: "https://www.linkedin.com/in/muhammad-azzikra" }, imageClass: "scale-[0.80] origin-bottom" },
       { name: "Glory Kristy Widjojo", position: "Skill & Knowledge", image: gloryImg, socialLinks: { instagram: "https://www.instagram.com/linum.sage", linkedin: "https://www.linkedin.com/in/glorykristy" } },
       { name: "Wahyu Hidayat Saputra", position: "Skill & Knowledge", image: wahyuImg, socialLinks: { instagram: "https://www.instagram.com/why_hy7", linkedin: "https://www.linkedin.com/in/wahyu-hidayat-saputra" } },
-      { name: "Keisha Zhafira", position: "Character Building", image: null, socialLinks: { instagram: "instagram.com/keishazhafiira", linkedin: "https://www.linkedin.com/in/keisha-zhafira" } },
       { name: "Salwa Ade Aprilia Dai", position: "Character Building", image: salwaImg, socialLinks: { instagram: "https://www.instagram.com/prilia.0_0", linkedin: "https://www.linkedin.com/in/salwa-ade-aprilia-dai" } },
     ]
   },
@@ -116,7 +120,6 @@ const ministeriesData = [
       { name: "Aqela Firyal Zahira", position: "Vice Minister of MOC", image: aqelaImg, socialLinks: { instagram: "https://www.instagram.com/qel_firry", linkedin: "https://www.linkedin.com/in/aqela-firyal-zahira" } },
     ],
     members: [ 
-      { name: "Injilia Elizabeth Oroh", position: "External Affairs", image: null, socialLinks: { instagram: "https://www.instagram.com/injiliaeliz", linkedin: "https://www.linkedin.com/in/injilia-oroh" },imageClass: "scale-[0.80] origin-bottom" },
       { name: "Odilia Miyagi Jessica", position: "External Affairs", image: odiliaImg, socialLinks: { instagram: "https://www.instagram.com/namjcs_", linkedin: "https://www.linkedin.com/in/odilia-miyagi-jessica" }, imageClass: "scale-[0.80] origin-bottom" },
       { name: "Steve Immanuel Andaria", position: "External Affairs", image: steveImg, socialLinks: { instagram: "https://www.instagram.com/imm.stevee", linkedin: "https://www.linkedin.com/in/steve-andaria" }, imageClass: "scale-[0.80] origin-bottom" },
       { name: "Andini Nurfitriani", position: "Internal Affairs", image: andiniImg, socialLinks: { instagram: "https://www.instagram.com/andnnrftrnii_", linkedin: "https://www.linkedin.com/in/andini-nurfitriani" }, imageClass: "scale-[0.80] origin-bottom" },
@@ -125,13 +128,12 @@ const ministeriesData = [
       { name: "Alviano Fredo Immanuel Rambulangi", position: "Multimedia", image: alvianoImg, socialLinks: { instagram: "https://www.instagram.com/aruviano", linkedin: "https://www.linkedin.com/in/alviano-f-i-r-🥶" }, imageClass: "scale-[0.80] origin-bottom" },
       { name: "Haura Fathya Agniaputri", position: "Multimedia", image: hauraImg, socialLinks: { instagram: "https://www.instagram.com/haurafthya", linkedin: "https://www.linkedin.com/in/haura-fathya-agniaputri" }, imageClass: "scale-[0.80] origin-bottom" },
       { name: "M Arief Khumaidurrohman", position: "Multimedia", image: ariefImg, socialLinks: { instagram: "https://www.instagram.com/arriefkm", linkedin: "https://www.linkedin.com/in/m-arief-khumaidurrohman" }, imageClass: "scale-[0.80] origin-bottom" },
-      { name: "Nabilla Alifya Khaerunnisa", position: "Multimedia", image: null, socialLinks: { instagram: "https://www.instagram.com/bylaavy__", linkedin: "https://www.linkedin.com/in/nabilla-alifya-khaerunnisa" }, imageClass: "scale-[0.80] origin-bottom" },
-      { name: "Revalina Safitri Harahap", position: "Multimedia", image: null, socialLinks: { instagram: "https://www.instagram.com/revalinvn", linkedin: "https://www.linkedin.com/in/revalina-safitri-harahap" }, imageClass: "scale-[0.80] origin-bottom" },
-      { name: "Teuku Radees Aqilla", position: "Multimedia", image: null, socialLinks: { instagram: "https://www.instagram.com/teukuradess", linkedin: "https://www.linkedin.com/in/teuku-radees-aqilla" }, imageClass: "scale-[0.80] origin-bottom" },
+      { name: "Nabilla Alifya Khaerunnisa", position: "Multimedia", image: nabillaImg, socialLinks: { instagram: "https://www.instagram.com/bylaavy__", linkedin: "https://www.linkedin.com/in/nabilla-alifya-khaerunnisa" }, imageClass: "scale-[0.80] origin-bottom" },
+      { name: "Revalina Safitri Harahap", position: "Multimedia", image: revaImg, socialLinks: { instagram: "https://www.instagram.com/revalinvn", linkedin: "https://www.linkedin.com/in/revalina-safitri-harahap" }, imageClass: "scale-[0.80] origin-bottom" },
       { name: "Gabriel Hamonangan Lumban Tobing", position: "Web Developer", image: gabrielImg, socialLinks: { instagram: "https://www.instagram.com/gbrlhm", linkedin: "http://www.linkedin.com/in/gabrielhamonangan" }, imageClass: "scale-[0.80] origin-bottom" },
       { name: "Muhammad Dhiya Ulhaq", position: "Web Developer", image: dhiyaImg, socialLinks: { instagram: "https://www.instagram.com/muhammaddhiya._", linkedin: "https://www.linkedin.com/in/m-dhiya-ulhaq" }, imageClass: "scale-[0.80] origin-bottom" },
       { name: "Dona Audy Nayoris", position: "Social Media Specialist", image: donaImg, socialLinks: { instagram: "https://www.instagram.com/donaaaudy", linkedin: "https://www.linkedin.com/in/dona-audy-nayoris" }, imageClass: "scale-[0.80] origin-bottom" },
-      { name: "Felia Oktavia", position: "Social Media Specialist", image: null, socialLinks: { instagram: "https://www.instagram.com/pelyww", linkedin: "https://www.linkedin.com/in/felia-oktavia" }, imageClass: "scale-[0.80] origin-bottom" },
+      { name: "Felia Oktavia", position: "Social Media Specialist", image: feliImg, socialLinks: { instagram: "https://www.instagram.com/pelyww", linkedin: "https://www.linkedin.com/in/felia-oktavia" }, imageClass: "scale-[0.80] origin-bottom" },
       { name: "Livia Sativa", position: "Social Media Specialist", image: liviaImg, socialLinks: { instagram: "https://www.instagram.com/livviastv", linkedin: "https://www.linkedin.com/in/livia-sativa" } },
       { name: "Rafael Ardiansyah", position: "Social Media Specialist", image: rafaelImg, socialLinks: { instagram: "https://www.instagram.com/__rafaelardsyh", linkedin: "https://www.linkedin.com/in/rafael-ardiansyah" }, imageClass: "scale-[0.80] origin-bottom" }
     ]
