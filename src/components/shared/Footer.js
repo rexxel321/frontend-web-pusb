@@ -129,7 +129,7 @@ const Footer = () => {
       {/* Footer Bottom */}
       <div className="bg-gray-900 py-6 lg:py-4">
         <p className="text-center text-xs lg:text-base font-medium leading-relaxed">
-          ©PUSB 2025. All rights reserved.
+          ©PUSB 2026. All rights reserved.
           <br />
           Created by <span className="px-2 font-semibold">PUSB MOC Web Developer</span>
         </p>

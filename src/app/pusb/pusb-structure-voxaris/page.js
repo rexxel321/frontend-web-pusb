@@ -56,19 +56,19 @@ import nabillaImg from "../../../assets/nabilla-removebg-preview.png";
 
 const ministeriesData = [
   { id: "exec", title: "President & Vice President", ministers: [
-    { name: "Fathin Fajrin", position: "President", image: fathinImg, socialLinks: { linkedin: "https://www.linkedin.com/in/fathiin-fajrin-51b113316", instagram: "https://www.instagram.com/fathiinfajrin" } },
-    { name: "Ida Ayu Diva Prabawati", position: "Vice President", image: idaImg, socialLinks: { linkedin: "https://www.linkedin.com/in/ida-ayu-diva-prabawati-darmawan", instagram: "https://www.instagram.com/iadiva" } },
-    { name: "Norezi Alberto Cardoso", position: "Vice President", image: noreziImg, socialLinks: { linkedin: "https://www.linkedin.com/in/norezi-alberto-cardoso", instagram: "https://www.instagram.com/iadiva" } },
+    { name: "Fathiin Fajrin", position: "President", image: fathinImg, socialLinks: { linkedin: "https://www.linkedin.com/in/fathiin-fajrin-51b113316", instagram: "https://www.instagram.com/fathiinfajrin" } },
+    { name: "Ida Ayu Diva Prabawati", position: "Vice President I", image: idaImg, socialLinks: { linkedin: "https://www.linkedin.com/in/ida-ayu-diva-prabawati-darmawan", instagram: "https://www.instagram.com/iadiva" } },
+    { name: "Norezi Alberto Cardoso", position: "Vice President II", image: noreziImg, socialLinks: { linkedin: "https://www.linkedin.com/in/norezi-alberto-cardoso", instagram: "https://www.instagram.com/iadiva" } },
   ]},
   { id: "mocs", title: "MOCS",
     ministers: [
-      { name: "Maria Dewi Anggraeni Sutjipto", position: "Minister of Compliance & Secretariat", image: mariaImg, socialLinks: { linkedin: "https://www.linkedin.com/in/maria-dewi-anggraeni-sutjipto-646747321", instagram: "https://www.instagram.com/mareeadews" } }
+      { name: "Maria Dewi Anggraeni Sutjipto", position: "Minister of Ministry of Cabinet Secretary", image: mariaImg, socialLinks: { linkedin: "https://www.linkedin.com/in/maria-dewi-anggraeni-sutjipto-646747321", instagram: "https://www.instagram.com/mareeadews" } }
     ],
     members: [
-      { name: "Zahara Shabilla Putri", position: "Member of MOCS", image: zaharaImg, socialLinks: { instagram: "https://www.instagram.com/zhrazsp_" } },
-      { name: "Grace Clarissa Simamora", position: "Member of MOCS", image: graceImg, socialLinks: { instagram: "https://www.instagram.com/shilvia11nov/", linkedin: "https://www.linkedin.com/in/grace-clarissa-simamora" } },
-      { name: "Shilvia Novicha Silitonga", position: "Member of MOCS", image: shilviaImg, socialLinks: { instagram: "https://www.instagram.com/shilvia11nov/", linkedin: "https://www.linkedin.com/in/shilvia-novicha-silitonga-3b55b9350/" } },
-      { name: "Rizkha Ramadhani Hafifah", position: "Member of MOCS", image: rizkhaImg, socialLinks: { instagram: "https://www.instagram.com/rizkhafifah", linkedin: "https://www.linkedin.com/in/rizkha-ramadhani-hafifah" } },
+      { name: "Rizkha Ramadhani Hafifah", position: "General Secretary I", image: rizkhaImg, socialLinks: { instagram: "https://www.instagram.com/rizkhafifah", linkedin: "https://www.linkedin.com/in/rizkha-ramadhani-hafifah" } },
+      { name: "Shilvia Novicha Silitonga", position: "General Secretary II", image: shilviaImg, socialLinks: { instagram: "https://www.instagram.com/shilvia11nov/", linkedin: "https://www.linkedin.com/in/shilvia-novicha-silitonga-3b55b9350/" } },
+      { name: "Grace Clarissa Simamora", position: "CnC Secretary I", image: graceImg, socialLinks: { instagram: "https://www.instagram.com/shilvia11nov/", linkedin: "https://www.linkedin.com/in/grace-clarissa-simamora" } },
+      { name: "Zahara Shabilla Putri", position: "CnC Secretary II", image: zaharaImg, socialLinks: { instagram: "https://www.instagram.com/zhrazsp_" } },
     ]
   },
   { id: "mof", title: "MOF",
@@ -76,10 +76,10 @@ const ministeriesData = [
       { name: "Nayla Zahra Kamilah", position: "Minister of Finance", image: naylaImg, socialLinks: { instagram: "https://www.instagram.com/naylszahra", linkedin: "https://www.linkedin.com/in/nayla-zahra-kamilah" } }
     ],
     members: [
-      { name: "Dhiezella Septiani Sihite", position: "Funding / Vice Minister", image: dhiezellaImg, socialLinks: { instagram: "https://www.instagram.com/_dhieello", linkedin: "https://www.linkedin.com/in/dhiezella-s-sihite-310727364/" } },
-      { name: "Maulidya Tanu Putri", position: "Funding", image: maulidyaImg, socialLinks: { instagram: "https://www.instagram.com/maulidyaptrr", linkedin: "https://www.linkedin.com/in/maulidyatanu-putri-779620380/" } },
-      { name: "Felice Greciella", position: "Accountant", image: feliceImg, socialLinks: { instagram: "https://www.instagram.com/aetherellaa_", linkedin: "https://www.linkedin.com/in/felice-greciella-903760380/" } },
-      { name: "Justine Smith Wijaya", position: "Accountant", image: justineImg, socialLinks: { instagram: "https://www.instagram.com/wntxls_", linkedin: "https://www.linkedin.com/in/justine-wijaya-10bb76380/" }, imageClass: "scale-[0.85] origin-bottom" },
+      { name: "Dhiezella Septiani Sihite", position: "Treasurer", image: dhiezellaImg, socialLinks: { instagram: "https://www.instagram.com/_dhieello", linkedin: "https://www.linkedin.com/in/dhiezella-s-sihite-310727364/" } },
+      { name: "Maulidya Tanu Putri", position: "Accountant", image: maulidyaImg, socialLinks: { instagram: "https://www.instagram.com/maulidyaptrr", linkedin: "https://www.linkedin.com/in/maulidyatanu-putri-779620380/" } },
+      { name: "Felice Greciella", position: "Sponsorship", image: feliceImg, socialLinks: { instagram: "https://www.instagram.com/aetherellaa_", linkedin: "https://www.linkedin.com/in/felice-greciella-903760380/" } },
+      { name: "Justine Smith Wijaya", position: "Sponsorship", image: justineImg, socialLinks: { instagram: "https://www.instagram.com/wntxls_", linkedin: "https://www.linkedin.com/in/justine-wijaya-10bb76380/" }, imageClass: "scale-[0.85] origin-bottom" },
       { name: "Abdul Rahman Sole", position: "President Store", image: abdulImg, socialLinks: { instagram: "https://www.instagram.com/_rh.mn1", linkedin: "https://www.linkedin.com/in/abdul-sole-03468a392" } },
       { name: "Syifa Salsabila", position: "President Store", image: syifaImg, socialLinks: { instagram: "https://www.instagram.com/syfslbyy", linkedin: "https://www.linkedin.com/in/syifa-salsabila-0633a4203/" } },
     ]
