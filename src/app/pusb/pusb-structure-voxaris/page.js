@@ -157,27 +157,27 @@ const EmptyPhotoCard = ({ name, position, image }) => (
 );
 
 const MinistrySection = ({ title, ministers = [], members = [] }) => (
-  <div className="w-full px-8 lg:px-16 py-10 border-t border-white/10">
-    <div className="w-full py-8 text-center" style={{ fontFamily: "Poppins" }}>
-      <h2 className="text-4xl lg:text-6xl font-bold">{title}</h2>
+  <div className="w-full px-4 sm:px-8 lg:px-16 py-8 sm:py-10 border-t border-white/10">
+    <div className="w-full py-6 lg:py-8 text-center" style={{ fontFamily: "Poppins" }}>
+      <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold">{title}</h2>
     </div>
-    <div className="w-full grid grid-cols-1 lg:grid-cols-2 items-start gap-4">
+    <div className="w-full flex flex-col xl:grid xl:grid-cols-2 items-start gap-8 xl:gap-4">
       <div className="w-full flex flex-col items-center">
-        <div className={`w-full grid gap-2 ${ministers.length === 1 ? "flex justify-center" : "grid-cols-2"}`}>
+        <div className={`w-full grid gap-4 sm:gap-2 ${ministers.length === 1 ? "flex justify-center" : "grid-cols-1 sm:grid-cols-2"}`}>
           {ministers.map((m, i) => (
             <div key={i} className="flex justify-center items-center">
               <CardMinister name={m.name} position={m.position} image={m.image} socialLinks={m.socialLinks} imageClass={m.imageClass || ""} size="lg" />
             </div>
           ))}
         </div>
-        <div className="w-full mt-8 text-center" style={{ fontFamily: "Poppins" }}>
-          <h2 className="text-[22px] lg:text-4xl font-semibold">
+        <div className="w-full mt-6 lg:mt-8 text-center" style={{ fontFamily: "Poppins" }}>
+          <h2 className="text-xl sm:text-[22px] lg:text-4xl font-semibold px-4">
             {ministers.length === 1 ? `Minister of ${title}` : `Minister & Vice Minister of ${title}`}
           </h2>
         </div>
       </div>
-      <div className="w-full flex flex-col justify-center items-center mt-8 lg:mt-0">
-        <h2 className="text-3xl font-semibold mb-6">Members of {title}</h2>
+      <div className="w-full flex flex-col justify-center items-center mt-4 lg:mt-0">
+        <h2 className="text-2xl sm:text-3xl font-semibold mb-4 sm:mb-6 text-center">Members of {title}</h2>
         <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-x-2 gap-y-4 lg:gap-6 lg:gap-y-8 place-items-center">
           {members.map((m, i) => (
             m.image ? (
@@ -227,19 +227,19 @@ const Page = () => {
               </h2>
             </div>
             <div className="w-full flex justify-center">
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8 items-center">
-                <div className="sm:col-start-1 sm:col-span-1 flex justify-end">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-6 md:gap-8 items-center w-full max-w-6xl">
+                <div className="order-2 sm:order-1 sm:col-start-1 sm:col-span-1 flex justify-center sm:justify-end">
                   <CardMinister name={ministry.ministers[1].name} position={ministry.ministers[1].position} image={ministry.ministers[1].image} socialLinks={ministry.ministers[1].socialLinks} size="lg" />
                 </div>
-                <div className="sm:col-start-2 sm:col-span-1 flex justify-center">
+                <div className="order-1 sm:order-2 sm:col-start-2 sm:col-span-1 flex justify-center">
                   <CardMinister name={ministry.ministers[0].name} position={ministry.ministers[0].position} image={ministry.ministers[0].image} socialLinks={ministry.ministers[0].socialLinks} size="xl" />
                 </div>
-                <div className="sm:col-start-3 sm:col-span-1 flex justify-start">
+                <div className="order-3 sm:order-3 sm:col-start-3 sm:col-span-1 flex justify-center sm:justify-start">
                   <CardMinister name={ministry.ministers[2].name} position={ministry.ministers[2].position} image={ministry.ministers[2].image} socialLinks={ministry.ministers[2].socialLinks} size="lg" />
                 </div>
               </div>
             </div>
-            <div className="w-full mt-8 sm:mt-12 text-center">
+            <div className="w-full mt-8 sm:mt-12 text-center px-4">
               <h2 className="text-lg sm:text-2xl lg:text-3xl font-semibold font-poppins">
                 President &amp; Vice Presidents of Voxaris Cabinet
               </h2>

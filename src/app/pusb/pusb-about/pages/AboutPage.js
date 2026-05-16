@@ -73,7 +73,7 @@ const PUSBPage = () => {
 
         <div className="text-center px-4">
           <h2 className="text-lg sm:text-2xl lg:text-4xl font-bold">
-            President University Student Board 2025
+            President University Student Board 2026
           </h2>
           <h2 className="text-lg sm:text-2xl lg:text-4xl font-semibold">
             {profilePUSB.cabinet_name}
@@ -87,7 +87,7 @@ const PUSBPage = () => {
   <div className="w-full lg:w-2/5 font-black text-center lg:text-left shrink-0">
     <p className="text-sm uppercase tracking-[0.3em] text-gray-400 mb-2 font-normal">Our Direction</p>
     <h2 className="text-4xl lg:text-5xl font-black leading-tight">PUSB</h2>
-    <h2 className="text-4xl lg:text-5xl font-black leading-tight">2025</h2>
+    <h2 className="text-4xl lg:text-5xl font-black leading-tight">2026</h2>
     <div className="w-12 h-1 bg-white mt-4 mx-auto lg:mx-0" />
     <h3 className="text-xl lg:text-2xl font-semibold mt-4 text-gray-300">
       {profilePUSB.cabinet_name}
@@ -115,7 +115,7 @@ const PUSBPage = () => {
       <section className="w-full flex flex-col lg:flex-row-reverse justify-center items-center py-8 px-6 lg:px-16 bg-gray-900">
         <div className="w-full text-center font-black pb-4 lg:pb-0">
           <h2 className="text-2xl lg:text-4xl">Mission</h2>
-          <h1 className="text-3xl lg:text-5xl">PUSB 2025</h1>
+          <h1 className="text-3xl lg:text-5xl">PUSB 2026</h1>
           <h3 className="text-3xl lg:text-5xl">{profilePUSB.cabinet_name}</h3>
         </div>
         <ContainerAccordion

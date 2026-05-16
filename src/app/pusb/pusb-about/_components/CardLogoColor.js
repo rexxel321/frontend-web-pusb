@@ -1,10 +1,13 @@
 import React from "react";
 
-const CardLogoColor = ({ colorData, rightPosition }) => {
+const CardLogoColor = ({ colorData, rightPosition, leftPosition }) => {
   return (
     <div
       className="relative bg-gray-900 p-4 rounded-lg shadow-lg text-white"
-      style={{ right: rightPosition }}
+      style={{
+        ...(rightPosition !== undefined && { right: rightPosition }),
+        ...(leftPosition !== undefined && { left: leftPosition }),
+      }}
     >
       <div className="flex items-center gap-4">
         <div

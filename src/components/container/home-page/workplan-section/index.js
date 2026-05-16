@@ -34,9 +34,11 @@ const HomeMainWorkplanSection = ({ element }) => {
       </div>
 
       {/* Cards */}
-      <div className="w-full max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="w-full max-w-4xl mx-auto flex justify-center">
         {mainWorkplanPUSB.map((workplan, index) => (
-          <CardWorkplan key={index} index={index} {...workplan} />
+          <div key={index} className="w-full">
+            <CardWorkplan index={index} {...workplan} />
+          </div>
         ))}
       </div>
     </section>

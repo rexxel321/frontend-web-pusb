@@ -73,14 +73,9 @@ import AninditaImage from "../assets/anindita-removebg-preview.png";
 
 export const mainWorkplanPUSB = [
   {
-    Workplan: "Get Involved Fest (GIF)",
+    Workplan: "EXPLORE COMPETITIONS, HIGHLIGHT OPPORTUNITIES (ECHO)",
     description:
-      "Inform the public about upcoming competitions, scholarship, and to encourage participation by posting appreciation posts for PresUnivers.",
-  },
-  {
-    Workplan: "Beyond The Obvious",
-    description:
-      "Provide updates 2 times in a month about new and interesting facts covering STEM (Science, Technology, Engineering, and Mathematics) on Instagram.",
+      "Utilizing digital platforms as the media, we focus on creating a supportive and informative platform for students by providing regular updates on national and international competitions. Through this initiative, we aim to not only keep students informed about valuable opportunities but also encourage their participation and growth.",
   },
 ];
 

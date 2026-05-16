@@ -1,17 +1,16 @@
 import React from "react";
 import SanctusLogo from "../../../../assets/logo_voxaris.png";
 import CardLogoColor from "../../pusb-about/_components/CardLogoColor";
-import CardLogoShape from "../../pusb-about/_components/CardLogoShape";
-import { logoColor, groupedLogoShapes } from "../../../../lib/data";
+import { logoColor } from "../../../../lib/data";
 
-const logoColorPositions = [-55, 14, 44, 0, -55];
-const logoShapePositions = [44, 50, 44];
+const leftColorPositions = [-55, 14, 44];
+const rightColorPositions = [14, -55];
 
 const CardLogoContainer = () => {
   return (
     <section className="w-full flex flex-col justify-center items-center px-4">
       <h2 className="p-4 text-2xl font-bold md:text-4xl lg:text-5xl text-center">
-        Cabinet Logo PUSB 2025
+        Cabinet Logo PUSB 2026
       </h2>
 
       <p className="text-base font-medium text-justify mt-4 mb-16 max-w-3xl lg:text-left">
@@ -19,21 +18,21 @@ const CardLogoContainer = () => {
         safety, and continuous growth in a commitment. It also reflects a
         respected, safe, and supportive environment where every member can grow
         and make a positive contribution in our cabinet, Voxaris. The logo also
-        consists of shapes and colors that represent the ministries of PUSB.
+        consists of colors that represent the ministries of PUSB.
       </p>
 
       <div className="w-full flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-16">
-        {/* Logo Colors Container */}
+        {/* Logo Colors Container Left */}
         <div className="w-full lg:w-1/3 flex flex-col gap-8 items-center lg:items-start">
           <div className="w-full text-center lg:text-left">
             <h1 className="text-3xl font-bold text-white">Color</h1>
           </div>
-          {logoColor?.map((color, index) =>
+          {logoColor?.slice(0, 3).map((color, index) =>
             color ? (
               <CardLogoColor
-                key={index}
+                key={`left-${index}`}
                 colorData={color}
-                rightPosition={logoColorPositions[index] ?? 0}
+                rightPosition={leftColorPositions[index] ?? 0}
               />
             ) : null
           )}
@@ -50,18 +49,20 @@ const CardLogoContainer = () => {
           />
         </div>
 
-        {/* Logo Shapes Container */}
-        <div className="w-full lg:w-1/3 flex flex-col gap-8 items-center lg:items-start">
-          <div className="w-full text-center lg:text-left">
-            <h1 className="text-3xl font-bold text-white">Shape</h1>
+        {/* Logo Colors Container Right */}
+        <div className="w-full lg:w-1/3 flex flex-col gap-8 items-center lg:items-end">
+          <div className="w-full text-center lg:text-right hidden lg:block opacity-0 select-none">
+            <h1 className="text-3xl font-bold text-white">Color</h1>
           </div>
-          {groupedLogoShapes.map((group, index) => (
-            <CardLogoShape
-              key={index}
-              group={group}
-              leftPosition={logoShapePositions[index] ?? 0}
-            />
-          ))}
+          {logoColor?.slice(3, 5).map((color, index) =>
+            color ? (
+              <CardLogoColor
+                key={`right-${index}`}
+                colorData={color}
+                leftPosition={rightColorPositions[index] ?? 0}
+              />
+            ) : null
+          )}
         </div>
       </div>
     </section>
